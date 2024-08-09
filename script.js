@@ -48,8 +48,8 @@ for (let i = 1; i <= 52; i++)
         let focusImage = document.createElement('img');
         let imageLayer = imageViewer.querySelector('#imageLayer');
         focusImage.src = `Together/${i}.jpg`;
+        currentImage = i - 1;
         focusImage.addEventListener('click', () => {
-            currentImage = i - 1;
             focusImage.classList.add('heartbeat');
             setTimeout(() => {
                 focusImage.classList.remove('heartbeat');
@@ -78,7 +78,7 @@ document.addEventListener('keydown', event => {
 
 function changeImageForward()
 {
-    currentImage = (currentImage + 1)%(imageSourceArray.length);
+    currentImage = (imageSourceArray.length + currentImage + 1)%(imageSourceArray.length);
     let imageToChange = imageLayer.querySelector('img');
     if (imageToChange)
         imageToChange.src = imageSourceArray[currentImage];

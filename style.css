@@ -43,7 +43,7 @@ body
 #imageViewer
 {
     width: 100svw;
-    height: 100svh;
+    height: 100dvh;
     display: grid;
     grid-template-columns: 20svw 1fr 20svw;
     position: fixed;
